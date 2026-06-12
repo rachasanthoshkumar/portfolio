@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   Award,
   ExternalLink,
   FileText,
@@ -439,19 +438,6 @@ function ProjectCard({ project, index }) {
           {project.tools.map((tool) => (
             <ProjectTechIcon key={tool} label={tool} />
           ))}
-        </div>
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
-          <span className="inline-flex items-center gap-2 rounded-lg bg-emerald-50 px-3 py-2 text-sm font-medium text-zinc-800 dark:bg-emerald-950/40 dark:text-zinc-200">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
-            {project.status}
-          </span>
-          <a
-            href={project.href}
-            className="inline-flex shrink-0 items-center gap-3 text-[14px] font-medium text-zinc-400 transition group-hover:text-zinc-950 dark:group-hover:text-zinc-50"
-          >
-            View Details
-            <ArrowRight size={18} />
-          </a>
         </div>
       </div>
     </motion.article>
