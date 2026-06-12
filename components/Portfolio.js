@@ -465,8 +465,8 @@ function CertificationsSection() {
   return (
     <section className="container mx-auto max-w-2xl px-4 py-10">
       <div className="mb-7">
-        <p className="text-sm text-zinc-400">Credentials</p>
-        <h2 className="mt-1 text-xl font-bold tracking-normal text-zinc-950 dark:text-zinc-50">
+        <p className="text-xs text-zinc-400">Credentials</p>
+        <h2 className="mt-1 text-lg font-bold tracking-normal text-zinc-950 dark:text-zinc-50">
           Certifications
         </h2>
       </div>
@@ -474,15 +474,15 @@ function CertificationsSection() {
         {certifications.map((certification, index) => (
           <motion.div
             key={certification}
-            className="flex items-center gap-3 rounded-xl border border-zinc-200 bg-white p-4 text-sm font-medium text-zinc-700 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-200"
+            className="flex items-center gap-2.5 rounded-xl border border-zinc-200 bg-white p-3 text-xs font-medium text-zinc-700 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-200"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={fadeUp}
             transition={{ delay: index * 0.05, duration: 0.45 }}
           >
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-300">
-              <Award size={18} />
+            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-amber-50 text-amber-600 dark:bg-amber-950/40 dark:text-amber-300">
+              <Award size={16} />
             </span>
             {certification}
           </motion.div>
