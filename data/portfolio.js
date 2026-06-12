@@ -69,7 +69,7 @@ export const projects = [
     description:
       "A full-stack URL shortener with dynamic slug redirects, stable QR codes, authentication, and persistent PostgreSQL storage.",
     status: "All Systems Operational",
-    tools: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Better Auth"],
+    tools: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     gradient: "from-pink-100 via-fuchsia-400 to-purple-700",
     accent: "bg-purple-500",
     href: "#",
