@@ -2,13 +2,13 @@ export const profile = {
   name: "Santhosh Racha",
   shortName: "Santhosh",
   initials: "SR",
-  role: "Software Engineer",
+  role: "Java Developer",
   location: "Hyderabad, India",
   email: "rachasanthosh2309@gmail.com",
   phone: "8688092739",
   resumeUrl: "/resume.pdf",
   summary:
-    "Software Engineer with 2+ years of experience developing internal tools, modernising legacy applications, and supporting business-critical production systems."
+    "Java Developer focused on building secure RESTful APIs, Spring Boot microservices, and reliable backend systems with PostgreSQL, Redis, and Docker."
 };
 
 export const navItems = [
@@ -24,40 +24,50 @@ export const socials = [
 ];
 
 export const heroTools = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Spring Security",
+  "Spring Data JPA",
+  "Hibernate",
+  "REST APIs",
   "PostgreSQL",
-  "Docker"
+  "Redis",
+  "Docker",
+  "Postman",
+  "React",
+  "JavaScript",
+  "Tailwind CSS"
 ];
 
 export const experience = [
   {
     company: "Tata Consultancy Services",
-    role: "Software Engineer",
-    period: "2024 - Present",
-    location: "Hyderabad, India",
+    role: "Java Developer",
+    period: "2024 - 2026",
+    location: "Hyderabad",
     status: "Full-time",
     logo: "TCS",
     links: ["On-site"],
     tools: [
-      "React",
-      "Next.js",
-      "JavaScript",
-      "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
       "REST APIs",
-      "Git",
-      "Docker"
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Postman",
+      "React",
+      "JavaScript",
+      "Tailwind CSS"
     ],
     highlights: [
-      "Developed and enhanced internal support tools and operational dashboards for real-time visibility into platform health, message processing, queue volumes, and system status.",
-      "Modernised legacy applications by rebuilding interfaces with pagination, filtering, refresh controls, and secure authentication to reduce manual operational effort.",
-      "Investigated and resolved 30+ production issues related to API failures, server outages, and data processing by analysing logs, identifying root causes, and implementing corrective actions."
+      "Developed scalable RESTful APIs using Spring Boot, following clean architecture principles, and secured endpoints with Spring Security using JWT-based authentication and role-based authorization.",
+      "Utilized Spring Data JPA and Hibernate ORM to design efficient entity mappings and repository layers, reducing boilerplate code and ensuring data consistency across modules.",
+      "Integrated Redis as a caching layer to optimize frequently accessed data and reduce latency while contributing to a microservices-based architecture.",
+      "Improved scalability, performance, and reliability through robust exception handling, validation, and AI-assisted development and debugging workflows."
     ]
   },
   
@@ -65,25 +75,25 @@ export const experience = [
 
 export const projects = [
   {
-    title: "ShortURL",
+    title: "Microservices eCommerce",
     description:
-      "A full-stack URL shortener with dynamic slug redirects, stable QR codes, authentication, and persistent PostgreSQL storage.",
+      "A microservices-based e-commerce platform with product catalog, cart, orders, and user management services communicating through RESTful APIs.",
     status: "All Systems Operational",
-    tools: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    tools: ["Java", "Spring Boot", "Spring Data JPA", "PostgreSQL", "Docker", "REST APIs"],
     gradient: "from-pink-100 via-fuchsia-400 to-purple-700",
     accent: "bg-purple-500",
     href: "#",
     repo: "#"
   },
   {
-    title: "MoodLog",
+    title: "URL Shortener",
     description:
-      "An AI-powered journaling app that analyzes entries, generates mood tags, summaries, reflective questions, and stores journal history.",
+      "A scalable Spring Boot URL shortening service with short-code generation, HTTP 302 redirects, Redis caching, rate limiting, expiration, and link analytics.",
     status: "All Systems Operational",
-    tools: ["React", "JavaScript", "Tailwind", "Gemini", "Drizzle ORM", "Neon"],
+    tools: ["Java", "Spring Boot", "Redis", "PostgreSQL", "REST APIs", "Docker"],
     gradient: "from-pink-100 via-fuchsia-400 to-purple-700",
     accent: "bg-indigo-500",
-    href: "https://moodlog-rho.vercel.app/",
+    href: "#",
     repo: "#"
   },
   
