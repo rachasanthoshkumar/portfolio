@@ -12,7 +12,6 @@ import {
   Mail,
   MapPin,
   Moon,
-  Network,
   Send,
   Sun
 } from "lucide-react";
@@ -32,19 +31,13 @@ import {
   SiExpress,
   SiGit,
   SiGoogle,
-  SiHibernate,
   SiJavascript,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
-  SiOpenjdk,
   SiPostgresql,
-  SiPostman,
   SiPrisma,
   SiReact,
-  SiRedis,
-  SiSpringboot,
-  SiSpringsecurity,
   SiTailwindcss,
   SiTypescript
 } from "react-icons/si";
@@ -68,13 +61,6 @@ function cn(...classes) {
 function getTechMeta(label) {
   const normalized = label.toLowerCase();
 
-  if (normalized === "java") return { Icon: SiOpenjdk, color: "text-red-600" };
-  if (normalized.includes("spring security")) return { Icon: SiSpringsecurity, color: "text-green-600" };
-  if (normalized.includes("spring")) return { Icon: SiSpringboot, color: "text-green-600" };
-  if (normalized.includes("hibernate")) return { Icon: SiHibernate, color: "text-yellow-700 dark:text-yellow-500" };
-  if (normalized.includes("redis")) return { Icon: SiRedis, color: "text-red-600" };
-  if (normalized.includes("postman")) return { Icon: SiPostman, color: "text-orange-500" };
-  if (normalized.includes("rest")) return { Icon: Network, color: "text-zinc-900 dark:text-white" };
   if (normalized.includes("typescript")) return { Icon: SiTypescript, color: "text-sky-500" };
   if (normalized.includes("javascript")) return { Icon: SiJavascript, color: "text-yellow-500" };
   if (normalized.includes("react")) return { Icon: SiReact, color: "text-cyan-500" };
@@ -226,14 +212,14 @@ function Hero() {
         {profile.summary}
       </p>
       <p className="mt-4 max-w-xl text-pretty text-sm leading-7 text-zinc-500 sm:text-base dark:text-zinc-400">
-        I build secure backend systems using{" "}
+        I build interactive web apps using{" "}
         {heroTools.map((tool, index) => (
           <span key={tool}>
             <TechPill label={tool} />
             {index < heroTools.length - 1 ? " " : ""}
           </span>
         ))}
-        . With a focus on scalable APIs, clean architecture, reliable data flows, and production-ready services.
+        . With a focus on clean UI, scalable code, and practical product thinking.
       </p>
       <div className="mt-6 flex flex-wrap justify-start gap-3">
         <a

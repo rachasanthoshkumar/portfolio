@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Santhosh Racha | Java Developer",
+  title: "Santhosh Racha | Software Engineer",
   description:
-    "Personal portfolio for Santhosh Racha, a Java Developer based in Hyderabad, India."
+    "Personal portfolio for Santhosh Racha, a Software Engineer based in Hyderabad, India."
 };
 
 export default function RootLayout({ children }) {
