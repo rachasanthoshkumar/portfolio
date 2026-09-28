@@ -2,13 +2,13 @@ export const profile = {
   name: "Santhosh Racha",
   shortName: "Santhosh",
   initials: "SR",
-  role: "Software Engineer",
+  role: "Java Developer",
   location: "Hyderabad, India",
   email: "rachasanthosh2309@gmail.com",
   phone: "8688092739",
   resumeUrl: "/resume.pdf",
   summary:
-    "Software Engineer with 2+ years of experience developing internal tools, modernising legacy applications, and supporting business-critical production systems."
+    "Java Developer focused on building secure RESTful APIs, microservices, and reliable backend systems with Spring Boot, PostgreSQL, MongoDB, Redis, and Apache Kafka."
 };
 
 export const navItems = [
@@ -17,47 +17,54 @@ export const navItems = [
 ];
 
 export const socials = [
-  { label: "GitHub", href: "https://github.com/", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: "linkedin" },
+  { label: "GitHub", href: "https://github.com/rachasanthoshkumar", icon: "github" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/santhosh-racha/", icon: "linkedin" },
   { label: "Email", href: "mailto:rachasanthosh2309@gmail.com", icon: "mail" },
   { label: "Portfolio", href: "#projects", icon: "globe" }
 ];
 
 export const heroTools = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Spring MVC",
+  "Spring Data JPA",
+  "Hibernate",
+  "REST APIs",
   "PostgreSQL",
+  "SQL Server",
+  "Redis",
   "Docker"
 ];
 
 export const experience = [
   {
     company: "Tata Consultancy Services",
-    role: "Software Engineer",
-    period: "2024 - Present",
+    role: "Java Developer",
+    period: "2024 - 2026",
     location: "Hyderabad, India",
     status: "Full-time",
     logo: "TCS",
     links: ["On-site"],
     tools: [
-      "React",
-      "Next.js",
-      "JavaScript",
-      "TypeScript",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
+      "Java",
+      "Spring Boot",
+      "Spring MVC",
+      "Spring Data JPA",
+      "Hibernate",
       "REST APIs",
+      "PostgreSQL",
+      "SQL Server",
+      "Redis",
       "Git",
       "Docker"
     ],
     highlights: [
-      "Developed and enhanced internal support tools and operational dashboards for real-time visibility into platform health, message processing, queue volumes, and system status.",
-      "Modernised legacy applications by rebuilding interfaces with pagination, filtering, refresh controls, and secure authentication to reduce manual operational effort.",
-      "Investigated and resolved 30+ production issues related to API failures, server outages, and data processing by analysing logs, identifying root causes, and implementing corrective actions."
+      "Developed and maintained RESTful APIs using Java and Spring Boot for backend application features.",
+      "Applied core Java and object-oriented programming concepts while developing and maintaining application components.",
+      "Worked with SQL queries for retrieving, inserting, updating, and deleting application data.",
+      "Implemented input validation and exception handling to improve API reliability and handle invalid requests and application errors.",
+      "Tested and validated REST APIs using Postman, troubleshooting API requests, responses, and database-related issues.",
+      "Worked with SQL Server for relational database operations and application data management."
     ]
   },
   
@@ -65,26 +72,39 @@ export const experience = [
 
 export const projects = [
   {
-    title: "ShortURL",
+    title: "AI Powered Fitness App",
     description:
-      "A full-stack URL shortener with dynamic slug redirects, stable QR codes, authentication, and persistent PostgreSQL storage.",
-    status: "All Systems Operational",
-    tools: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+      "A Java and Spring Boot microservices platform for user management, fitness tracking, and Gemini-powered insights, secured with Keycloak.",
+    tools: [
+      "Java",
+      "Spring Boot",
+      "Spring Cloud Gateway",
+      "Eureka",
+      "Keycloak",
+      "OAuth2 / JWT",
+      "PostgreSQL",
+      "MongoDB",
+      "Apache Kafka",
+      "Google Gemini"
+    ],
     gradient: "from-pink-100 via-fuchsia-400 to-purple-700",
     accent: "bg-purple-500",
-    href: "#",
-    repo: "#"
+    href: null,
+    repo: "https://github.com/rachasanthoshkumar/AI-fitness-App",
+    previewTitle: "Fitness",
+    previewSubtitle: "AI Insights"
   },
   {
-    title: "MoodLog",
+    title: "TinyURL",
     description:
-      "An AI-powered journaling app that analyzes entries, generates mood tags, summaries, reflective questions, and stores journal history.",
-    status: "All Systems Operational",
-    tools: ["React", "JavaScript", "Tailwind", "Gemini", "Drizzle ORM", "Neon"],
+      "A Spring Boot URL shortening backend with collision-resistant short codes, HTTP redirects, Redis caching, rate limiting, configurable expiry, and analytics.",
+    tools: ["Java", "Spring Boot", "REST APIs", "Redis", "PostgreSQL", "Docker", "JUnit", "Mockito"],
     gradient: "from-pink-100 via-fuchsia-400 to-purple-700",
     accent: "bg-indigo-500",
-    href: "https://moodlog-rho.vercel.app/",
-    repo: "#"
+    href: null,
+    repo: "https://github.com/rachasanthoshkumar/tinyURL",
+    previewTitle: "Shorten URLs,",
+    previewSubtitle: "Ship Faster"
   },
   
 ];

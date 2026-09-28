@@ -26,21 +26,32 @@ import {
 } from "@/data/portfolio";
 import {
   SiAuth0,
+  SiApachekafka,
   SiDocker,
   SiDrizzle,
+  SiEclipseadoptium,
   SiExpress,
   SiGit,
   SiGoogle,
+  SiHibernate,
   SiJavascript,
+  SiJsonwebtokens,
+  SiJunit5,
+  SiKeycloak,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
   SiPrisma,
   SiReact,
+  SiRedis,
+  SiSpring,
+  SiSpringboot,
+  SiSpringsecurity,
   SiTailwindcss,
   SiTypescript
 } from "react-icons/si";
+import { DiMsqlServer } from "react-icons/di";
 
 const socialIcons = {
   github: GitBranch,
@@ -61,6 +72,18 @@ function cn(...classes) {
 function getTechMeta(label) {
   const normalized = label.toLowerCase();
 
+  if (normalized === "java") return { Icon: SiEclipseadoptium, color: "text-red-600" };
+  if (normalized.includes("spring security")) return { Icon: SiSpringsecurity, color: "text-green-600" };
+  if (normalized.includes("spring boot")) return { Icon: SiSpringboot, color: "text-green-600" };
+  if (normalized.includes("spring")) return { Icon: SiSpring, color: "text-green-600" };
+  if (normalized.includes("hibernate")) return { Icon: SiHibernate, color: "text-amber-600" };
+  if (normalized.includes("kafka")) return { Icon: SiApachekafka, color: "text-zinc-950 dark:text-white" };
+  if (normalized.includes("keycloak")) return { Icon: SiKeycloak, color: "text-zinc-950 dark:text-white" };
+  if (normalized.includes("sql server")) return { Icon: DiMsqlServer, color: "text-red-600" };
+  if (normalized.includes("mongo")) return { Icon: SiMongodb, color: "text-green-600" };
+  if (normalized.includes("redis")) return { Icon: SiRedis, color: "text-red-600" };
+  if (normalized.includes("oauth") || normalized.includes("jwt")) return { Icon: SiJsonwebtokens, color: "text-pink-600" };
+  if (normalized.includes("junit") || normalized.includes("mockito")) return { Icon: SiJunit5, color: "text-green-600" };
   if (normalized.includes("typescript")) return { Icon: SiTypescript, color: "text-sky-500" };
   if (normalized.includes("javascript")) return { Icon: SiJavascript, color: "text-yellow-500" };
   if (normalized.includes("react")) return { Icon: SiReact, color: "text-cyan-500" };
@@ -365,10 +388,10 @@ function ProjectPreview({ project, index }) {
         <div className="mt-7 grid grid-cols-[1.05fr_0.95fr] gap-4 px-5">
           <div>
             <p className="text-[22px] font-black leading-[1.05] text-white">
-              {index === 0 ? "Build Fast," : project.title}
+              {project.previewTitle}
             </p>
             <p className="mt-1 text-[22px] font-black leading-[1.05] text-indigo-300">
-              {index === 0 ? "Ship Smart" : "MCP Server"}
+              {project.previewSubtitle}
             </p>
             <div className="mt-4 h-2 w-28 rounded-full bg-white/15" />
             <div className="mt-2 h-2 w-20 rounded-full bg-white/10" />
@@ -414,20 +437,24 @@ function ProjectCard({ project, index }) {
             {project.title}
           </h3>
           <div className="flex shrink-0 items-center gap-4 text-zinc-400">
-            <a
-              href={project.href}
-              aria-label={`${project.title} live preview`}
-              className="transition hover:text-zinc-900 dark:hover:text-zinc-100"
-            >
-              <Globe size={28} strokeWidth={1.8} />
-            </a>
-            <a
-              href={project.repo}
-              aria-label={`${project.title} repository`}
-              className="transition hover:text-zinc-900 dark:hover:text-zinc-100"
-            >
-              <GitBranch size={27} strokeWidth={1.8} />
-            </a>
+            {project.href && (
+              <a
+                href={project.href}
+                aria-label={`${project.title} live preview`}
+                className="transition hover:text-zinc-900 dark:hover:text-zinc-100"
+              >
+                <Globe size={28} strokeWidth={1.8} />
+              </a>
+            )}
+            {project.repo && (
+              <a
+                href={project.repo}
+                aria-label={`${project.title} repository`}
+                className="transition hover:text-zinc-900 dark:hover:text-zinc-100"
+              >
+                <GitBranch size={27} strokeWidth={1.8} />
+              </a>
+            )}
           </div>
         </div>
         <p className="mt-3 min-h-[112px] text-[14px] leading-[1.55] text-zinc-400 dark:text-zinc-400">
